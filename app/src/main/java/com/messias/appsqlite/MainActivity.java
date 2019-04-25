@@ -8,7 +8,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btCad;
+    private Button btCad, btLista;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +17,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btCad = findViewById(R.id.bt_cadastro);
+        btLista = findViewById(R.id.bt_listar);
         btCad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btLista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListaActivity.class);
                 startActivity(intent);
             }
         });

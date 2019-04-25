@@ -2,6 +2,7 @@ package com.messias.appsqlite;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 public class Model {
@@ -37,5 +38,16 @@ public class Model {
         }else{
             return "Registro inserido com sucesso";
         }
+    }
+
+    public Cursor listar(){
+        Cursor cursor;
+        String[] campos = {"_id","nome","tel"};
+        db = banco.getReadableDatabase();
+        cursor = db.query("cliente", campos, null, null,null,null,null,null);
+        if (cursor != null){
+            cursor.moveToFirst();
+        }
+        return cursor;
     }
 }

@@ -26,14 +26,20 @@ public class CadastroActivity extends AppCompatActivity {
         btSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Model model = new Model(getBaseContext());
+                /*Model model = new Model(getBaseContext());
                 Cliente c = new Cliente();
                 c.setNome(ctNome.getText().toString());
-                c.setNome(ctTel.getText().toString());
+                c.setNome(ctTel.getText().toString());controller.inserirBanco(c.getNome(), c.getTel());
+                String result = model.inserir(c.getNome(),c.getTel());
+                Toast.makeText(getBaseContext(), controller.toString(),Toast.LENGTH_LONG).show();*/
+                Controller controller = new Controller();
+                Cliente c = new Cliente();
 
-                // controller.inserirBanco(c.getNome(), c.getTel());
-                //String result = model.inserir(c.getNome(),c.getTel());
-                Toast.makeText(getBaseContext(), controller.toString(),Toast.LENGTH_LONG).show();
+                c.setNome(ctNome.getText().toString());
+                c.setTel(ctTel.getText().toString());
+
+                String result = controller.salvarCliente(c, getBaseContext());
+                Toast.makeText(getBaseContext(), result,Toast.LENGTH_LONG).show();
             }
         });
     }
