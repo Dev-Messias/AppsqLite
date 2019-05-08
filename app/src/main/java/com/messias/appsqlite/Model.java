@@ -52,4 +52,36 @@ public class Model {
 
         return cursor;
     }
+
+    public String alterar(int id, String nome, String tel){
+
+        ContentValues valores;
+        String where;
+        db = banco.getWritableDatabase();
+        where = "_id=" + id;
+         valores = new ContentValues();
+         valores.put("_id", id);
+         valores.put("nome", nome);
+         valores.put("tel", tel);
+        int result = db.update("cliente",valores,where,null);
+        db.close();
+        if (result == -1){
+            return  "erro ao alterar registro";
+        }else{
+            return "Registro alterado com sucesso";
+        }
+
+    }
+
+    public String excluir(int id){
+        String where = "_id=" + id;
+        db = banco.getWritableDatabase();
+        int result = db.delete("cliente",where,null);
+        db.close();
+        if (result == -1){
+            return  "erro ao excluir registro";
+        }else{
+            return "Registro alterado com sucesso";
+        }
+    }
 }

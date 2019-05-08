@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:columnCount="3"
+    android:rowCount="2">
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="49dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ID"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="NOME"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TELEFONE"
+        android:textSize="15dp" />
+
+</GridLayout>
