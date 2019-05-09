@@ -7,6 +7,41 @@
     android:orientation="vertical"
     tools:context=".ListaActivity">
 
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:rowCount="2">
+
+        <TextView
+            android:layout_width="49dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/background_light"
+            android:text="ID"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/background_light"
+            android:text="NOME"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/background_light"
+            android:gravity="center"
+            android:text="TELEFONE"
+            android:textSize="15dp" />
+
+    </GridLayout>
+
     <ListView
         android:id="@+id/lista"
         android:layout_width="match_parent"
